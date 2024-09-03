@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh;"> 
+  <input type="number" id="number" placeholder="Enter Your Roll Number" style="text-align:center; padding: 10px; font-size: 21px; color: #00698f; border: 1px solid #ccc; border-radius: 5px; width: 70%; margin-bottom: 20px;"> 
+  <button class="button" onclick="openFile()" style="padding: 12px; font-size: 21px; color: #ffffff; border: none; border-radius: 5px; background-color: #500852; cursor: pointer; width: 75%;"> Check Result NOW </button> 
+</div> 
+<script> 
+  function openFile() { 
+    var number = document.getElementById("number").value; 
+    if (number > 57 || number == "" || isNaN(number)) { 
+      window.open("Warning.html", "_self"); 
+    } else { 
+      var file = number + ".html"; 
+      window.open(file, "_self"); 
+    } 
+  } 
+</script>
+</body>
+
+</html>
