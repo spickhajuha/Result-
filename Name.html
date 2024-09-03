@@ -1,0 +1,25 @@
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 90vh;"> 
+  <input type="text" id="number" placeholder="Enter Your Name" style="text-align:center; padding: 10px; font-size: 21px; color: #00698f; border: 1px solid #ccc; border-radius: 5px; width: 70%; margin-bottom: 20px;"> 
+  <button class="button" onclick="openFile()" style="padding: 12px; font-size: 21px; color: #ffffff; border: none; border-radius: 5px; background-color: #500852; cursor: pointer; width: 75%;"> Check Result NOW </button> 
+</div> 
+<script> 
+  function openFile() { 
+    var number = document.getElementById("number").value; 
+    if (isNaN(number)) { 
+      var file = number + ".html"; 
+      var xhr = new XMLHttpRequest(); 
+      xhr.open('HEAD', file, false); 
+      xhr.send(); 
+      if (xhr.status == 404) { 
+        window.open("Alert.html", "_self"); 
+      } else { 
+        window.open(file, "_self"); 
+      } 
+    } else if (number == "17072008" || number == "05082008" || number == "16122010" || number == "9696147562") { 
+      window.open("Grollno.html", "_self"); 
+    } else { 
+      window.open("Rln.html", "_self"); 
+    } 
+  } 
+</script>
